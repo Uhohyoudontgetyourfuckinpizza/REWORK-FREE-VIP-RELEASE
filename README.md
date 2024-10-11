@@ -127,7 +127,7 @@ local function findGuiAndSetText()
 
             if textLabel then
 
-                textLabel.Text = "the sorcerer everyone knows :3"
+                textLabel.Text = "???"
 
             end
 
@@ -243,11 +243,11 @@ local startTime = 0
 
 Anim:Play()
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(4)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(3)
 
 
     end
@@ -305,7 +305,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(5)
 
 
 delay(1.8, function()
@@ -424,7 +424,7 @@ Anim:AdjustSpeed(0)
 
 Anim.TimePosition = startTime
 
-Anim:AdjustSpeed(1)
+Anim:AdjustSpeed(2)
 
 
     end
@@ -466,7 +466,7 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://17325160621 "
+AnimAnim.AnimationId = "rbxassetid://18435303746 "
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
