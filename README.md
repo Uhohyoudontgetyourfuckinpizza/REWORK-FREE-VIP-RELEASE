@@ -71,6 +71,40 @@ local ToolName = baseButton.ToolName
 
 ToolName.Text = "Stomp"
 
+-- make tool-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "Infinity Teleport"
+tool.RequiresHandle = false -- Handle
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+local mouseConnection
+
+-- teleport stuff
+local function teleportToClick(targetPosition)
+    local player = game.Players.LocalPlayer
+    if player and player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+        player.Character.HumanoidRootPart.CFrame = CFrame.new(targetPosition)
+    end
+end
+
+-- Tool equipped event
+tool.Equipped:Connect(function()
+    local player = game.Players.LocalPlayer
+    local mouse = player:GetMouse()
+
+    mouseConnection = mouse.Button1Down:Connect(function()
+        teleportToClick(mouse.Hit.p)
+    end)
+end)
+
+-- Tool unequipped event
+tool.Unequipped:Connect(function()
+
+    if mouseConnection then
+        mouseConnection:Disconnect()
+        mouseConnection = nil
+    end
+end)
 
 local Players = game:GetService("Players")
 
