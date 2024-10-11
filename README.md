@@ -93,7 +93,7 @@ local function findGuiAndSetText()
 
             if textLabel then
 
-                textLabel.Text = "the sorcerer everyone knows"
+                textLabel.Text = "the sorcerer everyone knows :3"
 
             end
 
@@ -257,7 +257,7 @@ end
 
 local AnimAnim = Instance.new("Animation")
 
-AnimAnim.AnimationId = "rbxassetid://18716033506"
+AnimAnim.AnimationId = "rbxassetid://18464372850"
 
 local Anim = Humanoid:LoadAnimation(AnimAnim)
 
